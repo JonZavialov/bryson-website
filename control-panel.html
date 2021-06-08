@@ -1,0 +1,61 @@
+<html xmlns:size="http://www.w3.org/1999/xhtml">
+	<head>
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/site.webmanifest">
+    <script defer src="node_modules/swup/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+    <link  href="styles.css" rel="stylesheet">
+    <title>BRYSON ENTERPRISES</title>
+	</head>
+	<body style="background-color:#36393F;">
+        <nav>
+            <table style=>
+              <thead>
+              <tr>
+                <th><a href="/index.html"><img src="https://i.ibb.co/cQnsxSP/bryson-logo.png" width="100"></a></th>
+                <th>&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                <th><a href="/our-projects.html" style = "font-size: x-large;">Our Projects</a></th>
+                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                <th><a href="/contact-us.html" style = "font-size: x-large;">Contact Us</a></th>
+                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                <th><a href="chat-room.php" style = "font-size: x-large;">Chat Room</a></th>
+                <th>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</th>
+                <th><a href="control-panel.html" style = "font-size: x-large;">Login</a></th>
+              </tr>
+              </thead>
+            </table>
+            <br>
+            <hr>
+            <br>
+          </nav>
+    <main id="swup" class="transition-fade">
+        <form id="login">
+            <input type="text" name="user" placeholder="Username...">
+            <br>
+            <br>
+            <input type="password" name="pass" placeholder="Password...">
+        </form>
+        <p id="incorrect" style="color:red"></p>
+
+        <button class="button" style="vertical-align:middle"><span onclick="login()">Submit</span></button>
+
+        <script>
+            function login(){
+                var username = document.getElementsByName("user")[0].value;
+                var password = document.getElementsByName("pass")[0].value;
+
+                if (username == "Bryson" && password == "Bryson"){
+                    window.location.href = '/control.html'
+                }
+                else{
+                    document.getElementById("incorrect").innerHTML = "Password Incorrect!";
+                    setTimeout(function () {document.getElementById('incorrect').innerHTML = " "}, 3000)
+                }
+            }
+            
+        </script>
+    </main>
+	</body>
+</html>
